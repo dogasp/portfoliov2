@@ -9,7 +9,7 @@ import './style.css'
 function App() {
 
   return (
-    <Container sx={{ p: { sm: 0, xs: 0 }, mx: 0, flexGrow: 1, width: 1 }}>
+    <Container sx={{ p: { sm: 0, xs: 0 }, mx: 0, flexGrow: 1}} maxWidth={false}>
       <Header />
 
       <div id="Home">

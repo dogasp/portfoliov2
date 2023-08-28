@@ -45,9 +45,10 @@ export function MobileMenu({ pages }) {
                     display: { xs: 'block', sm: 'none' },
                 }}>
                 {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <MenuItem key={page} >
                         <Link
                             activeClass="active"
+                            onClick={handleCloseNavMenu}
                             spy={true}
                             smooth={true}
                             duration={500}

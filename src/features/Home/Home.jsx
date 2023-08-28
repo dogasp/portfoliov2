@@ -12,7 +12,7 @@ export function Home() {
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column'
-        }}>
+        }} maxWidth={false}>
             <Homeparticles />
             <Hometext />
             

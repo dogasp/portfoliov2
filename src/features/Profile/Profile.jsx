@@ -1,19 +1,21 @@
 import { Container, Card, CardMedia, CardContent } from '@mui/material'
 import { Profilecontent } from './Components/Profilecontent'
-import { Profileicon } from './Components/ProfileIcon'
+import { Profileicon } from './Components/Profileicon'
+import { Profilebutton } from './Components/Profilebutton'
 
 
 export function Profile() {
     return (
-        <Container sx={{ height: { sm: '40vh', xs: '80vh' } }}>
+        <Container sx={{ height: { sm: '55vh', xs: '80vh' } }} maxWidth={'md'}>
 
             <Card
-                elevation='15'
+                elevation={15}
                 sx={{
                     display: "flex",
                     alignItems: { sm: 'normal', xs: 'center' },
                     flexDirection: { sm: 'row', xs: 'column' },
-                    marginTop: 4,
+                    mx: 4,
+                    my: 2,
                     height: "inherit"
                 }}>
                 <CardMedia
@@ -26,9 +28,10 @@ export function Profile() {
                     }}
                 />
 
-                <CardContent sx={{ my: { sm: 4, xs: 0 }, mx: { sm: 0, xs: 4 } }}>
+                <CardContent sx={{ marginBottom: { sm: 2, xs: 0 }, mx: { sm: 0, xs: 4 } }}>
                     <Profilecontent />
                     <Profileicon />
+                    <Profilebutton />
                 </CardContent>
             </Card>
         </Container>)

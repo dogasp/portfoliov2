@@ -1,9 +1,9 @@
-import { Typography } from '@mui/material'
+import { Typography, Box } from '@mui/material'
 import { Link } from 'react-scroll'
 
 export function Profilecontent() {
     return (
-        <>
+        <Box textAlign={'justify'}>
             <Typography variant="h2" sx={{ m: 2, color: "secondary.main" }}>Dorian GASPAR</Typography>
             <Typography variant='caption' style={{ display: "inline-block" }}>Committed and curious, I am developing my skills at CY-Tech : a School specialized in Computer Science.</Typography>
 
@@ -15,8 +15,8 @@ export function Profilecontent() {
                 smooth={true}
                 duration={500}
                 offset={-64}
-                to={"Projects"}><Typography display="inline" variant='caption' sx={{ color: "secondary.main" }}>Projects</Typography></Link> section.</Typography>
+                to={"Projects"}><Typography display="inline" variant='caption' sx={{ color: "secondary.main", fontWeight:600 }}>Projects</Typography></Link> section.</Typography>
 
-        </>
+        </Box>
     )
 }
