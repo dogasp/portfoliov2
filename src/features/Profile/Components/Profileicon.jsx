@@ -3,7 +3,7 @@ import { IconButton, Box } from '@mui/material'
 
 export function Profileicon() {
     return (
-        <Box sx={{my:2}}>
+        <Box sx={{}}>
             <IconButton href='https://www.linkedin.com/in/dorian-gaspar/' target='blank' size="small" 
             sx={{boxShadow:3, m: 1, maxWidth: '30px', maxHeight:'30px', p:2}}>
                 <LinkedIn sx={{color: "#0E76A8"}}/>

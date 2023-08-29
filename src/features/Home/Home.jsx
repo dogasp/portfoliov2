@@ -7,7 +7,6 @@ export function Home() {
         <Container sx={{
             height: '80vh',
             bgcolor: "background.main",
-            alignContent: "center",
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
