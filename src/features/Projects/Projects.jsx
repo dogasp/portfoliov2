@@ -2,33 +2,40 @@ import { Box, Container, Typography } from "@mui/material"
 import { projectList } from "./Components/ProjectList"
 import { useState } from "react"
 import { Link } from "react-scroll";
+import { Projectitem } from "./Components/Projectitem";
 
 
-export function Projects(){
+export function Projects() {
 
-    const [projectFilter, setProjectFilter] = useState(projectList);
+    const [projectFilterList, setProjectFilterList] = useState(projectList);
+    const [projectFilter, setProjectFilter] = useState("All")
 
-    function handleUpdrateFilter(filter){
+    function handleUpdrateFilter(filter) {
         const filteredList = projectList.filter((project) => (filter === "All") || project.category === filter)
-        setProjectFilter(filteredList)
+        setProjectFilterList(filteredList)
+        setProjectFilter(filter);
     }
-    
+
     return (
         <Container sx={{
             marginTop: 10,
         }} maxWidth={false}>
 
-            <Typography variant="h1" sx={{textAlign: "center"}}>Projects</Typography>
-            <Box sx={{display: "flex", justifyContent:"center"}}>
+            <Typography variant="h1" sx={{ textAlign: "center", my: 4 }}>Projects</Typography>
+            <Box sx={{ display: "flex", justifyContent: "center", my: 4 }}>
                 <Link
                     spy={true}
                     smooth={true}
                     duration={500}
                     offset={-64}
                     to="Projects"
-                    sx={{color:'black'}}
                     onClick={() => handleUpdrateFilter("All")}>
-                        <Typography>All</Typography>
+                    <Typography sx={{
+                        px: 4,
+                        bgcolor: projectFilter === "All" ? "secondary.main" : "white",
+                        color: projectFilter === "All" ? "white" : "black",
+                    }}>
+                        All</Typography>
                 </Link>
                 <Link
                     spy={true}
@@ -36,9 +43,13 @@ export function Projects(){
                     duration={500}
                     offset={-64}
                     to="Projects"
-                    sx={{color:'black'}}
+                    sx={{ color: 'black' }}
                     onClick={() => handleUpdrateFilter("Personnal")}>
-                        <Typography>Personnal</Typography>
+                    <Typography sx={{
+                        px: 4,
+                        bgcolor: projectFilter === "Personnal" ? "secondary.main" : "white",
+                        color: projectFilter === "Personnal" ? "white" : "black",
+                    }}>Personnal</Typography>
                 </Link>
                 <Link
                     spy={true}
@@ -46,15 +57,19 @@ export function Projects(){
                     duration={500}
                     offset={-64}
                     to="Projects"
-                    sx={{color:'black'}}
+                    sx={{ color: 'black' }}
                     onClick={() => handleUpdrateFilter("School")}>
-                        <Typography>School</Typography>
+                    <Typography sx={{
+                        px: 4,
+                        bgcolor: projectFilter === "School" ? "secondary.main" : "white",
+                        color: projectFilter === "School" ? "white" : "black",
+                    }}>School</Typography>
                 </Link>
             </Box>
 
-            {projectFilter.map((project) => {
+            {projectFilterList.map((project) => {
                 return (
-                    <Typography key={project.title} sx={{color:'black'}}>{project.title}</Typography>
+                    <Projectitem key={project.title} project={project}/>
                 )
             })}
         </Container>
