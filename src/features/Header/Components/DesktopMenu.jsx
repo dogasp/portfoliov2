@@ -9,7 +9,6 @@ export function DesktopMenu({ pages }) {
                     sx={{ mx: 2, color: 'primary.main', display: 'block' }}
                     key={page}>
                     <Link
-                        activeClass="active"
                         spy={true}
                         smooth={true}
                         duration={500}

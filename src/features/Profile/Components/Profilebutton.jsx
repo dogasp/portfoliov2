@@ -1,6 +1,5 @@
 import { Box, Button } from "@mui/material";
 
-
 export function Profilebutton(){
     return (
         <Box sx={{my: 2, textAlign: {sm:"left", xs:"center"}}}>

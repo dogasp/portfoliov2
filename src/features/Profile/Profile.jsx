@@ -15,8 +15,8 @@ export function Profile() {
                     alignItems: { sm: 'normal', xs: 'center' },
                     flexDirection: { sm: 'row', xs: 'column' },
                     mx: 4,
-                    my: 3,
-                    height: "inherit"
+                    my: 10,
+                    height: "inherit",
                 }}>
                 <CardMedia
                     component="img"
