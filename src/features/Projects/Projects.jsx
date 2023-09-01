@@ -34,6 +34,7 @@ export function Projects() {
                         px: 4,
                         bgcolor: projectFilter === "All" ? "secondary.main" : "white",
                         color: projectFilter === "All" ? "white" : "black",
+                        fontSize: '20px',
                     }}>
                         All</Typography>
                 </Link>
@@ -49,6 +50,7 @@ export function Projects() {
                         px: 4,
                         bgcolor: projectFilter === "Personnal" ? "secondary.main" : "white",
                         color: projectFilter === "Personnal" ? "white" : "black",
+                        fontSize: '20px',
                     }}>Personnal</Typography>
                 </Link>
                 <Link
@@ -63,15 +65,18 @@ export function Projects() {
                         px: 4,
                         bgcolor: projectFilter === "School" ? "secondary.main" : "white",
                         color: projectFilter === "School" ? "white" : "black",
+                        fontSize: '20px',
                     }}>School</Typography>
                 </Link>
             </Box>
-
-            {projectFilterList.map((project) => {
-                return (
-                    <Projectitem key={project.title} project={project}/>
-                )
-            })}
+            
+            <Box sx={{display:"flex", flexDirection:"row", m:8, justifyContent:"center", flexWrap:"wrap"}}>
+                {projectFilterList.map((project) => {
+                    return (
+                        <Projectitem key={project.title} project={project}/>
+                    )
+                })}
+            </Box>
         </Container>
     )
 }

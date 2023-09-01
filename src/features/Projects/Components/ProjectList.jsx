@@ -1,6 +1,6 @@
 export const projectList = [
     {
-        title: "CYJE's Website",
+        title: "CYJE's Website v2",
         image: "src/assets/Projects/siteCYJE.jpg",
         tech: ["HTML", "CSS", "JS", "PHP", "Laravel"],
         text:"I developped a new version of my School's Junior Enterprise's website using the Laravel framework.",
