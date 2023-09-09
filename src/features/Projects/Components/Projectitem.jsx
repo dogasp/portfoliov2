@@ -1,4 +1,4 @@
-import { Card, Typography, CardMedia, Box, Fade, Button } from "@mui/material"
+import { Card, Typography, CardMedia, Box, Fade, Button, Chip } from "@mui/material"
 import { useState } from "react"
 
 export function Projectitem({project}){
@@ -6,17 +6,24 @@ export function Projectitem({project}){
     const [reveal, setReveal] = useState(false);
 
     return (
-        <Card sx={{width: 0.15, m:4, position:"relative"}} onMouseEnter={() => setReveal(true)} onMouseLeave={() => setReveal(false)} elevation={15}>
+        <Card sx={{width: 0.2, m:3, position:"relative"}} onMouseEnter={() => setReveal(true)} onMouseLeave={() => setReveal(false)} elevation={15}>
             <Fade in={!reveal} timeout={500}>
                 <CardMedia component="img" image={project.image}/>
             </Fade>
             <Fade in={reveal} timeout={500}>
                 <Box sx={{position:"absolute", top: 0}} width="100%" height="100%">
-                    <Typography variant="h1" sx={{ color: "secondary.main", textAlign:"center", my: 2 }}>{project.title}</Typography>
-                    <Typography sx={{ color: 'black', mx: 2, textAlign:"justify" }}>{project.text}</Typography>
-                    <Typography sx={{ color: 'black' }}>{project.date}</Typography>
-                    <Button variant="contained" href={project.link} target="blank" sx={{ color: 'white', bgcolor:"secondary.main" }}>
-                        {project.link_text}</Button>
+                    <Typography variant="h2" sx={{ color: "secondary.main", textAlign:"center", my: 2 }}>{project.title}</Typography>
+                    <Box sx={{display:"flex", flexWrap:"wrap", mx:2}}>
+                        {project.tech.map((tech) => {
+                            return (
+                                <Chip key={tech} label={tech} size="small" sx={{mx:0.5, marginBottom: 1}}/>
+                            )
+                        })}
+                    </Box>
+                    <Typography sx={{ color: 'black', mx: 3, textAlign:"justify" }}>{project.text}</Typography>
+                    <Typography sx={{ color: 'black', position: "absolute", left:"6%", bottom: "7%"}}>{project.date}</Typography>
+                    {project.link_text !== "" && <Button variant="contained" href={project.link} target="blank" sx={{ color: 'white', bgcolor:"secondary.main", position: "absolute", right:"6%", bottom: "5%" }}>
+                        {project.link_text}</Button>}
                 </Box>
             </Fade>
         </Card>

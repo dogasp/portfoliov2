@@ -9,13 +9,14 @@ export function Profilecontent() {
 
             <Typography variant='caption' style={{ display: "inline-block" }}>I acquired a lot of knowledge on my own by carrying out multiple projects.</Typography>
 
-            <Typography variant='caption' style={{ display: "inline-block" }}>All of them can been seen on my <Link
+            <Typography variant='caption' style={{ display: "inline-block" }}>All of them can be seen on my <Link
                 activeClass="active"
                 spy={true}
                 smooth={true}
                 duration={500}
                 offset={-64}
-                to={"Projects"}><Typography display="inline" variant='caption' sx={{ color: "secondary.main", fontWeight:600 }}>Projects</Typography></Link> section.</Typography>
+                to={"Projects"}
+                style={{cursor: "pointer"}}><Typography display="inline" variant='caption' sx={{ color: "secondary.main", fontWeight:600 }}>Projects</Typography></Link> section.</Typography>
 
         </Box>
     )
