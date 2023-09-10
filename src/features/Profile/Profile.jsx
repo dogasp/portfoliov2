@@ -20,7 +20,7 @@ export function Profile() {
                 }}>
                 <CardMedia
                     component="img"
-                    image='/src/assets/pp_dorian.png'
+                    image={window.location.href + '/images/pp_dorian.png'}
                     sx={{
                         width: { sm: "40%", xs: "50%" },
                         objectFit: "contain",

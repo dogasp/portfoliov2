@@ -8,7 +8,7 @@ export function Projectitem({project}){
     return (
         <Card sx={{width: 0.2, m:3, position:"relative"}} onMouseEnter={() => setReveal(true)} onMouseLeave={() => setReveal(false)} elevation={15}>
             <Fade in={!reveal} timeout={500}>
-                <CardMedia component="img" image={project.image}/>
+                <CardMedia component="img" image={window.location.href + project.image}/>
             </Fade>
             <Fade in={reveal} timeout={500}>
                 <Box sx={{position:"absolute", top: 0}} width="100%" height="100%">
