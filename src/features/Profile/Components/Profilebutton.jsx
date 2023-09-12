@@ -1,4 +1,5 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import { Link } from "react-scroll";
 
 export function Profilebutton(){
 
@@ -16,7 +17,15 @@ export function Profilebutton(){
                     Download Resume
             </Button>
             <Button variant="contained" size="small" sx={{bgcolor:"secondary.main", color:"primary.main", mx:1}}>
-                    Get in touch
+                <Link
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={-100}
+                    to="Contact"
+                    sx={{textDecoration:"none"}}>
+                    <Typography>Get in touch</Typography>
+                </Link>
             </Button>
         </Box>
     )

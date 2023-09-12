@@ -1,11 +1,23 @@
 import { Button, Card, TextField, ThemeProvider, Typography, createTheme } from "@mui/material";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export function ContactForm(){
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [content, setContent] = useState("");
+
+    function submitForm(){
+      emailjs.send("service_buweiul", "template_lf4frtk", {name: name, email:email, content:content}, "ATt6FoCc1LXMgO1c9")
+      .then(() => {
+        setName("")
+        setEmail("")
+        setContent("")
+      }, (error) => {
+        console.error(error)
+      })
+    }
 
     const themeForm = createTheme({
         palette: {
@@ -16,8 +28,8 @@ export function ContactForm(){
     });
 
     return (
-        <Card sx={{width: "30%", bgcolor:"primary.main", marginTop:2, p:6, position:"relative"}}>
-            <Typography variant="h3" sx={{color:"secondary.main", textAlign:"center"}}>
+        <Card sx={{width: "30%", bgcolor:"primary.main", marginTop:4, p:6, position:"relative"}}>
+            <Typography variant="h3" sx={{color:"secondary.main", textAlign:"center", mx:2}}>
                 Have a question or want to work together?
             </Typography>
           <ThemeProvider theme={themeForm}>
@@ -27,7 +39,7 @@ export function ContactForm(){
                 label="Your name"
                 onChange={(e) => setName(e.target.value)}
                 fullWidth
-                sx={{my:1}}/>
+                sx={{my:1.5}}/>
             <TextField 
                 variant="standard"
                 value={email}
@@ -42,10 +54,10 @@ export function ContactForm(){
                 fullWidth
                 multiline
                 minRows={4}
-                sx={{my:3}}/>
+                sx={{my:4}}/>
           </ThemeProvider>
 
-          <Button variant="contained" sx={{bgcolor:"secondary.main", color:"primary.main", mx:2, position:"absolute", right:"10%", bottom: "5%"}}>
+          <Button variant="contained" onClick={() => submitForm()} sx={{bgcolor:"secondary.main", color:"primary.main", mx:2, position:"absolute", right:"10%", bottom: "5%"}}>
                   Submit
           </Button>
             
