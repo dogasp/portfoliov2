@@ -12,7 +12,7 @@ export function DesktopMenu({ pages }) {
                         spy={true}
                         smooth={true}
                         duration={500}
-                        offset={-64}
+                        offset={-100}
                         to={page}>
                         <Typography>{page}</Typography>
                     </Link>

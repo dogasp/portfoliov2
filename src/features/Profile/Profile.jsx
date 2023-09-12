@@ -6,7 +6,7 @@ import { Profilebutton } from './Components/Profilebutton'
 
 export function Profile() {
     return (
-        <Container sx={{ height: { sm: '30vh', xs: '80vh' } }} maxWidth={'md'}>
+        <Container sx={{ height: { sm: '40vh', xs: '80vh' } }} maxWidth={'md'}>
 
             <Card
                 elevation={15}

@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Link } from "react-scroll";
 import { Projectitem } from "./Components/Projectitem";
 
-
 export function Projects() {
 
     const [projectFilterList, setProjectFilterList] = useState(projectList);
@@ -35,6 +34,7 @@ export function Projects() {
                         bgcolor: projectFilter === "All" ? "secondary.main" : "white",
                         color: projectFilter === "All" ? "white" : "black",
                         fontSize: '20px',
+                        borderRadius: "17px"
                     }}>
                         All</Typography>
                 </Link>
@@ -51,6 +51,7 @@ export function Projects() {
                         bgcolor: projectFilter === "Personnal" ? "secondary.main" : "white",
                         color: projectFilter === "Personnal" ? "white" : "black",
                         fontSize: '20px',
+                        borderRadius: "17px"
                     }}>Personnal</Typography>
                 </Link>
                 <Link
@@ -66,6 +67,7 @@ export function Projects() {
                         bgcolor: projectFilter === "School" ? "secondary.main" : "white",
                         color: projectFilter === "School" ? "white" : "black",
                         fontSize: '20px',
+                        borderRadius: "17px"
                     }}>School</Typography>
                 </Link>
             </Box>

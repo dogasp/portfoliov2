@@ -21,17 +21,20 @@ const theme = createTheme({
   },
   typography: {
     h1: {
-      fontSize: "2rem",
+      fontSize: "2.5rem",
       fontWeight: 600,
     },
     h2: {
-      fontSize: "1.75rem",
+      fontSize: "2rem",
       fontWeight: 600,
     },
     h3: {
-      fontSize: "1.2rem",
+      fontSize: "1.3rem",
       fontWeight: 600,
     }
+  },
+  shape: {
+    borderRadius: "17px",
   }
 })
 
