@@ -3,8 +3,8 @@ import { Link } from 'react-scroll'
 
 export function Profilecontent() {
     return (
-        <Box textAlign={'justify'} sx={{marginBottom: 3}}>
-            <Typography variant="h2" sx={{ m: 1, marginBottom: 2, color: "secondary.main" }}>Dorian GASPAR</Typography>
+        <Box textAlign={'justify'} sx={{marginBottom: {xs: 1, sm:2, lg: 3}}}>
+            <Typography variant="h2" sx={{ m: 1, marginBottom: 2, color: "secondary.main", fontSize: {xs: "1.5em", lg: "2em"}, textAlign: "center" }}>Dorian GASPAR</Typography>
             <Typography variant='caption' style={{ display: "inline-block" }}>Committed and curious, I am developing my skills at CY-Tech : a School specialized in Computer Science.</Typography>
 
             <Typography variant='caption' style={{ display: "inline-block" }}>I acquired a lot of knowledge on my own by carrying out multiple projects.</Typography>

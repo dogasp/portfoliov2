@@ -6,15 +6,16 @@ import { Profilebutton } from './Components/Profilebutton'
 
 export function Profile() {
     return (
-        <Container sx={{ height: { sm: '40vh', xs: '80vh' } }} maxWidth={'md'}>
+        <Container sx={{ height: { sm: '40vh', xs: '83vh' } }} maxWidth={'md'}>
 
             <Card
                 elevation={15}
                 sx={{
                     display: "flex",
+                    alignContent: "stretch",
                     alignItems: { sm: 'normal', xs: 'center' },
                     flexDirection: { sm: 'row', xs: 'column' },
-                    mx: 4,
+                    mx: {sm: 4, xs: 1},
                     my: 10,
                     height: "inherit",
                 }}>
@@ -24,18 +25,20 @@ export function Profile() {
                     sx={{
                         width: { sm: "40%", xs: "50%" },
                         objectFit: "contain",
-                        m: 3,
+                        m: {sm: 3, xs: 1},
                     }}
                 />
 
                 <CardContent sx={{ 
-                    mx: { sm: 0, xs: 4 }, 
+                    mx: { sm: 3, xs: 4 }, 
                     my: {sm: 2, xs:0},
+                    p:0,
                     display: 'flex', 
+                    flexGrow: "1",
+                    height: 1,
                     alignItems: 'left',
-                    flexDirection: 'column', 
-                    alignContent: "justify",
-                    justifyContent: 'center',}}>
+                    flexDirection: 'column',
+                    justifyContent: {xs:'space-around', sm:"center"}}}>
                     <Profilecontent />
                     <Profileicon />
                     <Profilebutton />

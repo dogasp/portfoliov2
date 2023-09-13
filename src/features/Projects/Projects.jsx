@@ -1,19 +1,33 @@
 import { Box, Container, Typography } from "@mui/material"
 import { projectList } from "./Components/ProjectList"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-scroll";
-import { Projectitem } from "./Components/Projectitem";
+import { Projectitemmobile } from "./Components/Projectitemmobile";
+import { Projectitemdesktop } from "./Components/Projectitemdesktop";
 
 export function Projects() {
 
-    const [projectFilterList, setProjectFilterList] = useState(projectList);
+    const [projectFilterList, setProjectFilterList] = useState(projectList)
     const [projectFilter, setProjectFilter] = useState("All")
+    const [width, setWidth] = useState(window.innerWidth)
 
     function handleUpdrateFilter(filter) {
         const filteredList = projectList.filter((project) => (filter === "All") || project.category === filter)
         setProjectFilterList(filteredList)
-        setProjectFilter(filter);
+        setProjectFilter(filter)
     }
+
+    
+    
+    useEffect(() => {
+        const handleResizeWindow = () => setWidth(window.innerWidth);
+        // subscribe to window resize event "onComponentDidMount"
+        window.addEventListener("resize", handleResizeWindow);
+        return () => {
+        // unsubscribe "onComponentDestroy"
+        window.removeEventListener("resize", handleResizeWindow);
+        };
+    }, []);
 
     return (
         <Container sx={{
@@ -72,11 +86,13 @@ export function Projects() {
                 </Link>
             </Box>
             
-            <Box sx={{display:"flex", flexDirection:"row", m:8, justifyContent:"center", flexWrap:"wrap"}}>
+            <Box sx={{display:"flex", flexDirection:"row", m:{lg: 8, xs:2, sm:6}, justifyContent:"center", flexWrap:"wrap"}}>
                 {projectFilterList.map((project) => {
-                    return (
-                        <Projectitem key={project.title} project={project}/>
-                    )
+                    if (width > 1200){
+                        <Projectitemdesktop project={project} key={project.title}/>
+                    } else {
+                        <Projectitemmobile project={project} key={project.title}/>
+                    }
                 })}
             </Box>
         </Container>

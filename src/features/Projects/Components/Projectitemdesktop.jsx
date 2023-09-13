@@ -1,7 +1,7 @@
 import { Card, Typography, CardMedia, Box, Fade, Button, Chip } from "@mui/material"
 import { useState } from "react"
 
-export function Projectitem({project}){
+export function Projectitemdesktop({project}){
 
     const [reveal, setReveal] = useState(false);
 

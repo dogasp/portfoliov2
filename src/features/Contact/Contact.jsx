@@ -6,7 +6,7 @@ export function Contact(){
     return (
         <Container sx={{
             marginTop: 10,
-            height: "70vh",
+            height: {sm: "70vh", xs:"95vh"},
             bgcolor: "background.main",
             position: "relative",
             display: "flex",

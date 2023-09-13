@@ -12,8 +12,8 @@ export function Profilebutton(){
       };
     
     return (
-        <Box sx={{my: 2, textAlign: {sm:"left", xs:"center"}}}>
-            <Button onClick={onDownload} variant="outlined" sx={{color: "secondary.main", mx:1, my:{sm:0 , xs:1}}} size="small">
+        <Box sx={{my: {sm: 2, xs: 1}, textAlign: {sm:"left", xs:"center"}, display:"flex", justifyContent:"center", flexDirection: {xs:"column", sm:"row"}}}>
+            <Button onClick={onDownload} variant="outlined" sx={{color: "secondary.main", mx:1}} size="small">
                     Download Resume
             </Button>
             <Button variant="contained" size="small" sx={{bgcolor:"secondary.main", color:"primary.main", mx:1}}>
