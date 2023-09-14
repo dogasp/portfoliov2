@@ -81,9 +81,9 @@ export const projectList = [
         link_text: "See website",
         category: "Personnal",
     },{
-        title: "Player recruter for World of Tanks",
+        title: "Player recruter for WoT",
         image: "/images/Projects/webscrapping.jpg",
-        tech: ["Python", "Webscrapping", "Discord Bot", "bs4", "Multiprocessing"],
+        tech: ["Python", "Webscrapping", "Discord Bot", "bs4"],
         text:"Multifunciton Discord bot and tools to find players with no clan and good enough stats to join the clan I wan in.",
         date:"2021",
         link:"https://github.com/dogasp/WebScrapping",

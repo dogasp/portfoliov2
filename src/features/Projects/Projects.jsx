@@ -17,8 +17,6 @@ export function Projects() {
         setProjectFilter(filter)
     }
 
-    
-    
     useEffect(() => {
         const handleResizeWindow = () => setWidth(window.innerWidth);
         // subscribe to window resize event "onComponentDidMount"
@@ -31,9 +29,8 @@ export function Projects() {
 
     return (
         <Container sx={{
-            marginTop: 10,
+            marginTop: 15,
         }} maxWidth={false}>
-
             <Typography variant="h1" sx={{ textAlign: "center", my: 4 }}>Projects</Typography>
             <Box sx={{ display: "flex", justifyContent: "center", my: 4 }}>
                 <Link
@@ -85,13 +82,12 @@ export function Projects() {
                     }}>School</Typography>
                 </Link>
             </Box>
-            
-            <Box sx={{display:"flex", flexDirection:"row", m:{lg: 8, xs:2, sm:6}, justifyContent:"center", flexWrap:"wrap"}}>
+            <Box direction="up" cascade triggerOnce sx={{display:"flex", flexDirection:"row", m:{lg: 8, xs:2, sm:6}, justifyContent:"center", flexWrap:"wrap"}}>
                 {projectFilterList.map((project) => {
                     if (width > 1200){
-                        <Projectitemdesktop project={project} key={project.title}/>
+                        return  <Projectitemdesktop project={project} key={project.title}/>
                     } else {
-                        <Projectitemmobile project={project} key={project.title}/>
+                        return <Projectitemmobile project={project} key={project.title}/>
                     }
                 })}
             </Box>

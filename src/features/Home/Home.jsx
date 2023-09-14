@@ -5,7 +5,7 @@ import {Homeparticles } from './Components/Homeparticles'
 export function Home() {
     return (
         <Container sx={{
-            height: '80vh',
+            height: '95vh',
             bgcolor: "background.main",
             display: 'flex',
             justifyContent: 'center',
@@ -14,7 +14,6 @@ export function Home() {
         }} maxWidth={false}>
             <Homeparticles />
             <Hometext />
-            
         </Container>
     )
 }

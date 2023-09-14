@@ -13,7 +13,7 @@ export function Homeparticles(){
             options={{
                 style: {
                     marginTop: "56px",
-                    height: "85vh",
+                    height: "100vh",
                     position: "absolute"
                 },
                 fpsLimit: 120,
@@ -56,9 +56,9 @@ export function Homeparticles(){
                     number: {
                         density: {
                             enable: true,
-                            area: 400,
+                            area: 350,
                         },
-                        value: 60,
+                        value: 50,
                     },
                     opacity: {
                         value: 0.4,

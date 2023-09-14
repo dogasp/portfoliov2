@@ -28,7 +28,7 @@ export function ContactForm(){
     });
 
     return (
-        <Card sx={{width: {xs:"60%", lg:"30%"}, minHeight:{sm:0, xs:"40vh"}, bgcolor:"primary.main", marginTop:4, p:6, position:"relative"}}>
+        <Card sx={{width: {xs:"71%", lg:"90%"}, minHeight:{sm:0, xs:"40vh"}, bgcolor:"primary.main", marginTop:4, p:6, position:"relative"}}>
             <Typography variant="h3" sx={{color:"secondary.main", textAlign:"center", mx:2}}>
                 Have a question or want to work together?
             </Typography>
