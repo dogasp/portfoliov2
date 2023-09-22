@@ -1,7 +1,7 @@
 export const projectList = [
     {
         title: "Portfolio V2",
-        image: "/images/Projects/portfoliov2.png",
+        image: "/images/Projects/portfoliov2.webp",
         tech: ["JS", "React", "Bun", "Material UI"],
         text:"The updated version of my original portfolio. The website you are currently looking at.",
         date:"2023",
@@ -10,7 +10,7 @@ export const projectList = [
         category: "Personnal",
     },{
         title: "CYJE's infrastructure",
-        image: "/images/Projects/infracyje.jpg",
+        image: "/images/Projects/infracyje.webp",
         tech: ["Nginx", "WordPress", "PHP", "Linux", "SSL"],
         text:"The website you are currently looking at. It's the updated version of my old portfolio.",
         date:"2023",
@@ -19,7 +19,7 @@ export const projectList = [
         category: "Personnal",
     },{
         title: "EU Carbon tracker",
-        image: "/images/Projects/carbontracker.png",
+        image: "/images/Projects/carbontracker.webp",
         tech: ["Python", "multiprocessing", "PowerBI", "Webscrapping"],
         text:"Project in a team of 3 where we had to scrap an european website to fetch data about carbon emission trade.",
         date:"2023",
@@ -28,7 +28,7 @@ export const projectList = [
         category: "School",
     },{
         title: "CYJE's website v3",
-        image: "/images/Projects/cyjev3.png",
+        image: "/images/Projects/cyjev3.webp",
         tech: ["WordPress"],
         text:"A new version of my School's Junior Enterprise's website using WordPress.",
         date:"2022",
@@ -37,7 +37,7 @@ export const projectList = [
         category: "Personnal",
     },{
         title: "Game4j",
-        image: "/images/Projects/Game4j.png",
+        image: "/images/Projects/Game4j.webp",
         tech: ["Map generation", "Java", "JavaFX", "Pathfinder"],
         text:"A new version of my School's Junior Enterprise's website using the Laravel framework.",
         date:"2021",
@@ -46,7 +46,7 @@ export const projectList = [
         category: "School",
     },{
         title: "Student council's website",
-        image: "/images/Projects/siteListe.png",
+        image: "/images/Projects/siteListe.webp",
         tech: ["Django", "Python"],
         text:"A new version of my School's Junior Enterprise's website using the Laravel framework.",
         date:"2022",
@@ -55,7 +55,7 @@ export const projectList = [
         category: "Personnal",
     },{
         title: "CYJE's website v2",
-        image: "/images/Projects/siteCYJE.jpg",
+        image: "/images/Projects/siteCYJE.webp",
         tech: ["PHP", "Laravel", "JS"],
         text:"A new version of my School's Junior Enterprise's website using the Laravel framework.",
         date:"2022",
@@ -64,7 +64,7 @@ export const projectList = [
         category: "Personnal",
     },{
         title: "Huffman's compression",
-        image: "/images/Projects/huffman.png",
+        image: "/images/Projects/huffman.webp",
         tech: ["C language"],
         text:"The goal was to compress files using Huffman's compression algorithm",
         date:"2021",
@@ -73,7 +73,7 @@ export const projectList = [
         category: "Personnal",
     },{
         title: "Portfolio v1",
-        image: "/images/Projects/portfoliov1.png",
+        image: "/images/Projects/portfoliov1.webp",
         tech: ["Flutter", "Dart"],
         text:"A portfolio website to talk about myself and what I worked on.",
         date:"2021",
@@ -82,7 +82,7 @@ export const projectList = [
         category: "Personnal",
     },{
         title: "Player recruter for WoT",
-        image: "/images/Projects/webscrapping.jpg",
+        image: "/images/Projects/webscrapping.webp",
         tech: ["Python", "Webscrapping", "Discord Bot", "bs4"],
         text:"Multifunciton Discord bot and tools to find players with no clan and good enough stats to join the clan I wan in.",
         date:"2021",
@@ -91,7 +91,7 @@ export const projectList = [
         category: "Personnal",
     },{
         title: "Traverse",
-        image: "/images/Projects/traverse.png",
+        image: "/images/Projects/traverse.webp",
         tech: ["C", "SDL", "Min-Max"],
         text:"A game invented by my scool similar to chess. It uses min-max algorithm to simulate player you can play against.",
         date:"2021",
@@ -109,7 +109,7 @@ export const projectList = [
         category: "School",
     },{
         title: "2048",
-        image: "/images/Projects/2048.png",
+        image: "/images/Projects/2048.webp",
         tech: ["C", "SDL"],
         text:"A 2048 with extra gamemodes such as a 2v2 race against the computer",
         date:"2020",
@@ -118,7 +118,7 @@ export const projectList = [
         category: "School",
     },{
         title: "La caverne aux jeux",
-        image: "/images/Projects/caverneAuxJeux.jpg",
+        image: "/images/Projects/caverneAuxJeux.webp",
         tech: ["Python", "tkinter", "matplotlib"],
         text:"8 minigames centralized in one app with plenty of statistics",
         date:"2019",
@@ -127,7 +127,7 @@ export const projectList = [
         category: "School",
     },{
         title: "Website for my classroom",
-        image: "/images/Projects/highschoolwebsite.jpg",
+        image: "/images/Projects/highschoolwebsite.webp",
         tech: ["C#", "ASP.NET"],
         text:"A new version of my School's Junior Enterprise's website using the Laravel framework.",
         date:"2018",
