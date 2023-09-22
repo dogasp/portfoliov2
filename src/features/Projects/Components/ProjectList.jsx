@@ -100,7 +100,7 @@ export const projectList = [
         category: "School",
     },{
         title: "L-system",
-        image: "/images/Projects/siteCYJE.jpg",
+        image: "/images/Projects/lsystems.jpg",
         tech: ["Python", "Turtle"],
         text:"L-system grow from a language and visualisation after a certain generation.",
         date:"2020",
