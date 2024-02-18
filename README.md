@@ -10,4 +10,4 @@ bun run --hot dev
 
 ## To deploy changes
 ```
-bun run --hot deploy
+bun run deploy
